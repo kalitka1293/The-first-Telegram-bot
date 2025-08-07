@@ -5,7 +5,7 @@ from telebot import types
 #сделать 4 кнопки с разными животными
 #рандомно присылаться будут картинки с животными
 
-app= telebot.TeleBot("5314239083:AAHibJuGAbqEReCT8PEc4wpa-HxkfCe7dSc")
+app= telebot.TeleBot("53142393083:AAHibJuGAbqERаeC1T8PEc4wpa-HxkfCe7dSc")
 @app.message_handler(commands = ['start'])
 def start(message):
     app.send_message(message.chat.id, f'Привет! Меня зовут Базант и я буду радовать тебя своей коллекцией картинок. Отправь команду /board, и выбери то, что хочешь посмотреть! \n Если ты нажал, а тебе не прислали, нажми еще раз и еще раз)))0)0)')
@@ -38,6 +38,7 @@ def otvet(message):
         x = str(random.randrange(1, 98))
         photo = open("Котик" + x + ".jpg", 'rb')
         app.send_photo(message.chat.id, photo)
+
 
 
 app.polling(none_stop=True)
